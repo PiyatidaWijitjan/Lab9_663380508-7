@@ -1953,3 +1953,8 @@ java.lang.IllegalStateException: Unable to compute bundle location for 'org.hamc
 
 !ENTRY org.eclipse.mylyn.tasks.ui 2 0 2025-09-08 22:55:48.048
 !MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.core.resources 2 2 2025-09-08 23:57:18.588
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2025-09-08 23:57:18.591
+!MESSAGE The project description file (.project) for 'mockito-junit-lab8' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FavoriteMovieTest" project="mockito-junit-labdouble" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="kku.sqa.lab.service.FavoriteMovieTest" time="0.047" displayname="FavoriteMovieTest" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieTest]">
+    <testcase name="test_getDatenight" classname="kku.sqa.lab.service.FavoriteMovieTest" time="0.039" displayname="test_getDatenight()" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieTest]/[method:test_getDatenight()]"/>
+    <testcase name="test_getEmptyPlaylist" classname="kku.sqa.lab.service.FavoriteMovieTest" time="0.004" displayname="test_getEmptyPlaylist()" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieTest]/[method:test_getEmptyPlaylist()]"/>
+    <testcase name="test_getFavorites" classname="kku.sqa.lab.service.FavoriteMovieTest" time="0.002" displayname="test_getFavorites()" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieTest]/[method:test_getFavorites()]"/>
+  </testsuite>
+</testrun>
