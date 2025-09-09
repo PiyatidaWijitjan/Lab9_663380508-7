@@ -1,0 +1,28 @@
+package kku.sqa.lab.service;
+
+import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import kku.sqa.lab.api.MovieService;
+
+public class FavoriteMovieMockitoTest {
+    
+    @Test
+    void test_getActionMovies() {
+        MovieService movieserviceMock = mock(MovieService.class);
+        List<String> movielist = Arrays.asList("The Notebook","50 First Dates","John Wick","Mad Max Fury Road");
+        
+        when(movieserviceMock.getMovieList("testUser","action")).thenReturn(movielist);
+            
+        FavoriteMovie favoriteMovie = new FavoriteMovie(movieserviceMock);
+        List<String> actionMovies = favoriteMovie.getMoviesByPlaylist("testUser", "action");
+        
+        assertEquals(3, actionMovies.size());
+        
+    }
+}

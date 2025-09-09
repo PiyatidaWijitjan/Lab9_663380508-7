@@ -1,0 +1,28 @@
+package kku.sqa.lab.service;
+
+import java.util.List;
+
+import kku.sqa.lab.api.MovieService;
+
+import java.util.ArrayList;
+
+public class FavoriteMovie {
+    
+    private MovieService movieservice;
+    
+    public FavoriteMovie(MovieService movieservice) {
+        this.movieservice = movieservice;
+    }
+    
+    public List<String> getMoviesByPlaylist(String username, String playlistName) {
+        List<String> movielist = new ArrayList<>();
+        List<String> allMovies = movieservice.getMovieList(username);
+        
+        for (String movie : allMovies) {
+            if (movie.toLowerCase().contains(playlistName.toLowerCase())) {
+            	movielist.add(movie);
+            }
+        }
+        return movielist;
+    }
+}

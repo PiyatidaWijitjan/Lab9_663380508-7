@@ -1,67 +1,37 @@
 package kku.sqa.lab.service;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import kku.sqa.lab.api.MovieService;
 
-class FavoriteMovieMockitoTest {
-
-    @Mock
-    private MovieService movieService;
-
-    private FavoriteMovie favoriteMovie;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-        favoriteMovie = new FavoriteMovie(movieService);
-    }
-
-    private Map<String, String> createMovie(String title, String genre, String playlist) {
-        Map<String, String> movie = new HashMap<>();
-        movie.put("title", title);
-        movie.put("genre", genre);
-        movie.put("playlist", playlist);
-        return movie;
-    }
-
+public class FavoriteMovieMockitoTest {
+    
     @Test
-    void test_getMoviesByPlaylist() {
-        when(movieService.getPurchasedMovies("user1")).thenReturn(Arrays.asList(
-                createMovie("John Wick", "action", "favorites"),
-                createMovie("Mad Max: Fury Road", "action", "favorites"),
-                createMovie("The Conjuring", "horror", "horror"),
-                createMovie("The Notebook", "romance", "datenight")
-        ));
-
-        List<String> favorites = favoriteMovie.getMoviesByPlaylist("user1", "favorites");
-
-        assertEquals(2, favorites.size());
-        assertTrue(favorites.contains("John Wick"));
-        assertTrue(favorites.contains("Mad Max: Fury Road"));
-
-        List<String> datenight = favoriteMovie.getMoviesByPlaylist("user1", "datenight");
-        assertEquals(1, datenight.size());
-        assertEquals("The Notebook", datenight.get(0));
-
-        List<String> horror = favoriteMovie.getMoviesByPlaylist("user1", "horror");
-        assertEquals(1, horror.size());
-        assertEquals("The Conjuring", horror.get(0));
-
-        List<String> empty = favoriteMovie.getMoviesByPlaylist("user1", "nonexistent");
-        assertTrue(empty.isEmpty());
-
-        verify(movieService, atLeast(1)).getPurchasedMovies("user1");
+    void test_getActionMovies() {
+        MovieService movieserviceMock = mock(MovieService.class);
+        List<String> movielist = Arrays.asList(
+        		"The Notebook - datenight",
+                "50 First Dates - datenight",
+                "A Walk to Remember - datenight",
+                "First Love - datenight",
+                "The Lucky One - datenight",
+                "The Conjuring - horror",
+                "Insidious - horror",
+                "John Wick - action",
+                "Mad Max Fury Road - action",
+                "Die Hard - action");
+        
+        when(movieserviceMock.getMovieList("piyatida","action")).thenReturn(movielist);
+            
+        FavoriteMovie favoriteMovie = new FavoriteMovie(movieserviceMock);
+        List<String> actionMovies = favoriteMovie.getMoviesByPlaylist("piyatida", "action");
+        
+        assertEquals(3, actionMovies.size()); 
     }
 }

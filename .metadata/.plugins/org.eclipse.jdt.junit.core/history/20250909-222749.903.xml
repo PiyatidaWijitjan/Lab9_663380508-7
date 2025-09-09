@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FavoriteMovieMockitoTest" project="mockito-junit-labdouble" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="kku.sqa.lab.service.FavoriteMovieMockitoTest" time="2.291" displayname="FavoriteMovieMockitoTest" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieMockitoTest]">
+    <testcase name="test_getActionMovies" classname="kku.sqa.lab.service.FavoriteMovieMockitoTest" time="2.291" displayname="test_getActionMovies()" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieMockitoTest]/[method:test_getActionMovies()]">
+      <failure>
+        <expected>4</expected>
+        <actual>3</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;4&gt; but was: &lt;3&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)&#13;
+	at kku.sqa.lab.service.FavoriteMovieMockitoTest.test_getActionMovies(FavoriteMovieMockitoTest.java:35)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

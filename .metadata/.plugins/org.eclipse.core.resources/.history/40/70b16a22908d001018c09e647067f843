@@ -1,0 +1,20 @@
+package kku.sqa.lab.service;
+import kku.sqa.lab.api.MovieService;
+import kku.sqa.lab.data.stub.MovieServiceStub;
+
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+import org.junit.jupiter.api.Test;
+
+public class FavoriteMovieTest {
+   
+    @Test
+    void test_getDatenightMovies_withStub() {
+        MovieService movieService = new MovieServiceStub();
+        FavoriteMovie favoriteMovie = new FavoriteMovie(movieService);
+        
+        List<String> datenightMovies = favoriteMovie.getMoviesByPlaylist("piyatida", "action");
+        
+        assertEquals(5, datenightMovies.size());
+    }
+}

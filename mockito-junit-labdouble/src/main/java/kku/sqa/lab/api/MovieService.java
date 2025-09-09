@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface MovieService {
-    List<Map<String, String>> getPurchasedMovies(String username);
+	public List<String> getMovieList(String username,String playlistName);
 }

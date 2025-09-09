@@ -1,0 +1,24 @@
+package kku.sqa.lab.data.stub;
+
+import java.util.Arrays;
+import java.util.List;
+
+import kku.sqa.lab.api.MovieService;
+
+public class MovieServiceStub implements MovieService {
+    @Override
+    public List<String> getMovieList(String username) {
+        return Arrays.asList(
+            "The Notebook - datenight",
+            "50 First Dates - datenight",
+            "A Walk to Remember - datenight",
+            "First Love - datenight",
+            "The Lucky One - datenight",
+            "The Conjuring - horror",
+            "Insidious - horror",
+            "John Wick - action",
+            "Mad Max Fury Road - action",
+            "Die Hard - action"
+        );
+    }
+}

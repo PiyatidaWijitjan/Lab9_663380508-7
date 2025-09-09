@@ -1,28 +1,24 @@
 package kku.sqa.lab.data.stub;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import kku.sqa.lab.api.MovieService;
 
 public class MovieServiceStub implements MovieService {
     @Override
-    public List<Map<String, String>> getPurchasedMovies(String username) {
+    public List<String> getMovieList(String username,String playlistName) {
         return Arrays.asList(
-            createMovie("John Wick", "action", "favorites"),
-            createMovie("Mad Max: Fury Road", "action", "favorites"),
-            createMovie("The Conjuring", "horror", "horror"),
-            createMovie("The Notebook", "romance", "datenight")
+            "The Notebook - datenight",
+            "50 First Dates - datenight",
+            "A Walk to Remember - datenight",
+            "First Love - datenight",
+            "The Lucky One - datenight",
+            "The Conjuring - horror",
+            "Insidious - horror",
+            "John Wick - action",
+            "Mad Max Fury Road - action",
+            "Die Hard - action"
         );
-    }
-
-    private Map<String, String> createMovie(String title, String genre, String playlist) {
-        Map<String, String> movie = new HashMap<>();
-        movie.put("title", title);
-        movie.put("genre", genre);
-        movie.put("playlist", playlist);
-        return movie;
     }
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FavoriteMovieTest" project="mockito-junit-labdouble" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="kku.sqa.lab.service.FavoriteMovieTest" time="0.06" displayname="FavoriteMovieTest" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieTest]">
+    <testcase name="test_getDatenightMovies_withStub" classname="kku.sqa.lab.service.FavoriteMovieTest" time="0.06" displayname="test_getDatenightMovies_withStub()" uniqueid="[engine:junit-jupiter]/[class:kku.sqa.lab.service.FavoriteMovieTest]/[method:test_getDatenightMovies_withStub()]"/>
+  </testsuite>
+</testrun>
